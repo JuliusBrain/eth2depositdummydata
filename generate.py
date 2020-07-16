@@ -43,12 +43,12 @@ def generateInputs(eth_amount):
 
 
 def main(argv):
-    if len(argv) == 2:
-        generatedInputs = generateInputs(int(argv[1]))
+    if len(argv) == 1:
+        generatedInputs = generateInputs(int(argv[0]))
         print(generatedInputs)
     else:
         print("Usage:\n First parameter: ETH deposit (in N * eth nominals) amount per one transaction")
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main(sys.argv[1:])
